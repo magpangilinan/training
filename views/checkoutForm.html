@@ -1,0 +1,65 @@
+<!-- Google font -->
+<link href="https://fonts.googleapis.com/css?family=Hind:400,700" rel="stylesheet"/>
+
+<!-- Bootstrap -->
+<link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" />
+
+<!-- Slick -->
+<link type="text/css" rel="stylesheet" href="css/slick.css" />
+<link type="text/css" rel="stylesheet" href="css/slick-theme.css" />
+
+<!-- nouislider -->
+<link type="text/css" rel="stylesheet" href="css/nouislider.min.css" />
+
+<!-- Font Awesome Icon -->
+<link rel="stylesheet" href="css/font-awesome.min.css"/>
+
+<!-- Custom stlylesheet -->
+<link type="text/css" rel="stylesheet" href="css/style.css" />
+
+{{#carts}}
+<!-- Product Single -->
+<div class="col-md-3 col-sm-6 col-xs-6">
+    <div class="product product-single">
+        <div class="product-thumb">
+            <img src="{{image}}" alt="">
+        </div>
+        <div class="product-body">
+            <h3 class="product-price">{{price}}</h3>
+            <di"product-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o empty"></i>
+            </div>
+            <h1 class="product-name">{{name}}</h1>
+            <p class="product-name">{{description}}</p>
+            </div>
+        </div>
+    </div>
+    <div >
+        <form class="primary-btn add-to-cart" method="POST" action="/product/cart/{{_id}}/checkedOut">
+            <input style="display : block" type="text" name="CustomerName" placeholder="Name" required/>
+            <input style="display : block" type="email" name="CustomerEmail" placeholder="Email" required/>
+            <div class="address">
+                <input style="display : block" type="text" name="CustomerSt" placeholder="Street/House No." required/>
+                <input style="display : block" type="text" name="CustomerBrgy" placeholder="Address" required/>
+                <input style="display : block" type="text" name="CustomerProvince" placeholder="Province" required/>
+            </div>
+                <input class="primary-btn" type="submit" value="Check Out" style="color: black"/>
+            </form>
+        </div>
+</div>
+<!-- /Product Single -->
+{{/carts}}
+
+
+<!-- jQuery Plugins -->
+<script src="js/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/nouislider.min.js"></script>
+<script src="js/jquery.zoom.min.js"></script>
+<script src="js/main.js"></script>
+

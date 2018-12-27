@@ -1,0 +1,38 @@
+{{#carts}}
+<!-- Product Single -->
+<div style='display:inline-block' class="col-md-3 col-sm-6 col-xs-6">
+    <div class="product product-single">
+        <div class="product-thumb">
+            <img style="height: 300px" src="{{image}}" alt="">
+        </div>
+        <div class="product-body">
+            <h3 class="product-price">{{price}}</h3>
+            <div class="product-rating">
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star"></i>
+                <i class="fa fa-star-o empty"></i>
+            </div>
+            <h1 class="product-name">{{name}}</h1>
+            <h6 class="product-name">{{description}}</h6>
+            </div>
+        </div>
+    </div>
+    
+</div>
+<!-- /Product Single -->
+{{/carts}}
+<div style="margin-left: 600px; padding:3px; border-radius:2px;">
+<form class="primary-btn add-to-cart" method="POST" action="/checkedoutAll">
+    <input style="display : block; color: black" type="text" name="CustomerName" placeholder="Name" required/>
+    <input style="display : block; color: black" type="email" name="CustomerEmail" placeholder="Email" required/>
+    <input style="display : block; color: black" type="text" name="CustomerSt" placeholder="Street/House No." required/>
+    <input style="display : block; color: black" type="text" name="CustomerBrgy" placeholder="Address" required/>
+    <input style="display : block; color: black" type="text" name="CustomerTown" placeholder="Town" required/>
+    <input style="display : block; color: black" type="text" name="CustomerProvince" placeholder="Province" required/>
+    <input  class="primary-btn" style="color: black" type="submit" value="Checkout">
+</form>
+</div>
+    
+
