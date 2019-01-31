@@ -27,7 +27,7 @@ const app = express();
 
 app.use(cookieParser('secret'));
 
-app.use(session({cookie: { maxAge: 60000 }}));
+// app.use(session({cookie: { maxAge: 60000 }}));
 
 app.use(flash());
 
@@ -155,7 +155,7 @@ app.get("/:id", (req, res) => {
 })
 
 //login html form
-app.get("/auth", (req, res) => {
+app.get("/login", (req, res) => {
    // mongoDb.collection('carts').find().toArray(function(err, data) {
     const authPage = require('./pages/auth');
 
@@ -164,7 +164,7 @@ app.get("/auth", (req, res) => {
 })
 
 //login
-app.post("/auth", (req, res) => {
+app.post("/login", (req, res) => {
     const email = req.body.email;
 
     const password = req.body.password;
